@@ -50,7 +50,7 @@ on:
 
 env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT }} # TODO: update Google Cloud project id
-  GAR_LOCATION: ${{ env.GAR_LOCATION }}-docker.pkg.dev with gcr.io # TODO: update Artifact Registry location
+  GAR_LOCATION: us-central1 (Iowa) # TODO: update Artifact Registry location
   SERVICE: deployinganewservice # TODO: update Cloud Run service name
   REGION: us-central1 # TODO: update Cloud Run service region
 
