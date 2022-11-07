@@ -30,12 +30,13 @@ public class HelloworldApplication {
 
   @Value("${NAME:GitHub Action workflows}")
   String name;
-
+  @Value("${FROM:Google Cloud Run}")
+  String from;
   @RestController
   class HelloworldController {
     @GetMapping("/")
     String hello() {
-      return "Hello from : " + name + "!";
+      return "This is : " + name + "!"+" From "+from;
     }
   }
 
