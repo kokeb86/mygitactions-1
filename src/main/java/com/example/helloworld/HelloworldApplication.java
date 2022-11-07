@@ -1,4 +1,3 @@
-package com.example.hellogitaction;
 /*
  * Copyright 2020 Google LLC
  *
@@ -18,7 +17,7 @@ package com.example.hellogitaction;
 // [START cloudrun_helloworld_service]
 // [START run_helloworld_service]
 
-
+package com.example.helloworld;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
@@ -27,22 +26,22 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-public class HellogitactionApplication {
+public class HelloworldApplication {
 
-	@Value("${NAME:GitHub Action Workflows}")
-	String name;
+  @Value("${NAME:GitHub Action workflows}")
+  String name;
 
-	@RestController
-	class HelloworldController {
-		@GetMapping("/")
-		String hello() {
-			return "Hello from: " + name + "!";
-		}
-	}
+  @RestController
+  class HelloworldController {
+    @GetMapping("/")
+    String hello() {
+      return "Hello from : " + name + "!";
+    }
+  }
 
-	public static void main(String[] args) {
-		SpringApplication.run(HellogitactionApplication.class, args);
-	}
+  public static void main(String[] args) {
+    SpringApplication.run(HelloworldApplication.class, args);
+  }
 }
 // [END run_helloworld_service]
 // [END cloudrun_helloworld_service]

@@ -1,4 +1,3 @@
-
 /*
  * Copyright 2020 Google LLC
  *
@@ -15,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.hellogitaction;
+package com.example.helloworld;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -32,15 +31,15 @@ import org.springframework.test.web.servlet.MockMvc;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @AutoConfigureMockMvc
-public class HellogitactionApplicationTests {
+public class HelloworldApplicationTests {
 
-	@Autowired private MockMvc mockMvc;
+  @Autowired private MockMvc mockMvc;
 
-	@Test
-	public void returnsHelloWorld() throws Exception {
-		mockMvc
-				.perform(get("/"))
-				.andExpect(status().isOk())
-				.andExpect(content().string("Hello World!"));
-	}
+  @Test
+  public void returnsHelloWorld() throws Exception {
+    mockMvc
+        .perform(get("/"))
+        .andExpect(status().isOk())
+        .andExpect(content().string("Hello World!"));
+  }
 }
